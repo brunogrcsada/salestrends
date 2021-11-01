@@ -1,0 +1,30 @@
+circle:first-of-type {
+    fill: #f0f0f0;
+  }
+  
+  circle {
+    fill: #fdfdfd;
+    filter: drop-shadow(0px 0px 2px rgb(0 0 0 / 0.4));
+  }
+  
+  path {
+    fill: #f46f6f;
+  }
+  
+  text:first-of-type {
+    fill: #f46f6f;
+    font-size: 35px;
+  }
+  
+  text:last-of-type {
+    fill: #595959;
+    font-size: 20px;
+  }
+  
+  svg.pie {
+    width: 230px;
+    height: 230px;
+    font-family: sans-serif;
+    margin: 20px 30px;
+  }
+  

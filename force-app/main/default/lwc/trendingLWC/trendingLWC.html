@@ -1,0 +1,36 @@
+<template>
+    <lightning-card class="card" title="Interest" icon-name="custom:custom63">
+                <template if:true={results}>
+                    <svg class="pie">
+                        <circle cx="115" cy="115" r="110"></circle>
+                        <path d={results.svg}></path>
+                        <circle cx="115" cy="115" r="90"></circle>
+                  
+                        <text x="50%" y="40%" dominant-baseline="middle" text-anchor="middle">
+                          {results.value}%
+                        </text>
+                        <text x="50%" y="60%" dominant-baseline="middle" text-anchor="middle">
+                          {results.keyword}
+                        </text>
+                      </svg>
+                </template>
+
+                <template if:false={results}>
+                    <svg class="pie">
+                        <circle cx="115" cy="115" r="110"></circle>
+                        <circle cx="115" cy="115" r="90"></circle>
+                  
+                        <text x="50%" y="40%" dominant-baseline="middle" text-anchor="middle">
+                          0%
+                        </text>
+                        <text x="50%" y="60%" dominant-baseline="middle" text-anchor="middle">
+                          Loading..
+                        </text>
+                    </svg>
+                </template>
+
+                <template if:true={accounts.error}>
+                    {accounts.error}
+                </template>
+        </lightning-card>
+</template>
